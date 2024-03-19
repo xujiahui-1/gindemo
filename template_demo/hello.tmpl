@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+{{/*//. 表示后端在渲染模板的时候传来的是什么。 .就是什么*/}}
+<p>Hello{{.user}}</p>
+<p>{{.user.Name}}</p>
+<p>{{.user.Age}}</p>
+<p>{{.didi}}</p>
+
+{{/*定义一个变量*/}}
+{{$v1 :=100}}
+
+{{/*移除空格*/}}
+{{- .user -}}
+
+{{/*条件判断*/}}
+{{if $v1}}
+{{$v1}}
+{{else}}
+v1啥都没有
+{{end}}
+
+
+
+</body>
+</html>
